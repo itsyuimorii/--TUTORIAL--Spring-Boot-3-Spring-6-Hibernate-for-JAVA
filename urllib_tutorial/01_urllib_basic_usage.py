@@ -9,7 +9,7 @@ import urllib.request
 
 
 # (1) Define an url that is the address you want to access
-url = 'http://www.baidu.com'
+url = 'http://www.google.com'
 
 # (2) simulate a browser sending a request to the server
 response = urllib.request.urlopen(url)
