@@ -36,3 +36,17 @@ By combining the Request class and the urlopen function, you can customize the r
 
 
 
+### POST request
+
+> In the HTTP protocol, there are two common request methods: GET and POST. GET requests typically attach parameters as a query string appended to the end of the URL, for example, `http://example.com/path?param1=value1&param2=value2`. On the other hand, POST request parameters are sent through the request body and are not directly appended to the URL.
+
+**For POST requests, the  parameters must be encoded and placed in the request body.**  To achieve this, the code uses the `urllib.parse.urlencode()` method to URL-encode the parameters, converting them into a format that is safe for passing in a URL. Then, `.encode('utf-8')` is used to convert the encoded string into a byte stream for passing the parameters in a POST request.
+
+Next, a `urllib.request.Request` object is created, with the URL, encoded parameters, and request headers passed as arguments to **customize the POST request.**
+
+In summary, the code comments and the first answer highlight two important aspects of POST request parameters:
+
+1. The parameters of a POST request are not directly appended to the URL but need to be placed in the parameters of the request object customization.
+2. The parameters of a POST request must be encoded before being passed, ensuring their security and correct transmission. In this example, the `urllib.parse.urlencode()` method is used for URL encoding, followed by `.encode('utf-8')` to convert it into a byte stream.
+
+These explanations differ from the second answer, which did not include the step of parsing the JSON response from the server, but focused on explaining the encoding and placement of POST request parameters.
