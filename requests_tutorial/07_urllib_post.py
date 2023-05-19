@@ -6,7 +6,7 @@ import json
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-url = 'https://translate.google.com/'
+url = 'https://fanyi.baidu.com/sug'
 
 headers = {
 'User-Agent':
