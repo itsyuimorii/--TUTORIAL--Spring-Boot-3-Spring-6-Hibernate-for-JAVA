@@ -109,3 +109,6 @@ Common **request body encoding methods** include:
 Please note that different programming languages and frameworks may provide specific libraries or methods to handle request body encoding. These libraries often handle the encoding details and convert it into a byte stream.
 
 In summary, a POST request usually requires encoding the request body as a byte stream. The specific encoding method depends on the type of data you are sending and the server's requirements.
+
+
+
