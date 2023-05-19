@@ -1,7 +1,3 @@
-# @Time: 2023-05-18 10:00 p.m.
-# @Author： Itsyuimoriispace
-# @File: 01_urllib_basic.py
-# @Project: Web Scraping in Python BeautifulSoup, Selenium & Scrapy 2023
 
 import urllib
 import urllib.request
