@@ -1,5 +1,3 @@
-
-import urllib
 import urllib.request
 
 # (1) Define an url that is the address you want to access

@@ -1,6 +1,5 @@
-
-import urllib
 import urllib.request
+
 url = 'http://www.google.com'
 '''
 The program will initiate an HTTP request and open the specified URL, which will return an object indicating the URL response.

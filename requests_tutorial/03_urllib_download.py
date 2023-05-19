@@ -1,4 +1,4 @@
-import urllib
+
 import urllib.request
 
 # 1. download page
