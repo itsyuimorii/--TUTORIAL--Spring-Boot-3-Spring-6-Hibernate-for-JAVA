@@ -3,15 +3,15 @@ import urllib.request
 import urllib.parse
 ssl._create_default_https_context = ssl._create_unverified_context
 
-base_url = 'https://translate.google.com/'
 
+url = 'https://fanyi.baidu.com/sug'
 headers = {
 'User-Agent':
 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'
 }
 
 data = {
-    'q': 'spider'
+    'kw': 'spider'
 }
 
 # post リクエストパラメータはエンコードする必要があります
@@ -33,3 +33,8 @@ import json
 
 obj = json.loads(content)
 print(obj)
+
+
+# The parameters of the post request method must be encoded data = urllib.parse.urlencode(data)
+# After encoding, the encode method must be called data = urllib.parse.urlencode(data).encode('utf-8')
+# The parameters are placed in the request object's custom method request = urllib.request.Request(url=url,data=data,headers=headers)
