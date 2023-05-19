@@ -32,14 +32,14 @@ def down_load(page, content):
     with open('douban_' + str(page) + '.json', 'w', encoding='utf-8') as fp:
         fp.write(content)
 
-if __name__ == '__main__':
-    start_page = int(input('Please enter the starting page number: '))
-    end_page = int(input('Please enter the ending page: '))
-
-    for page in range(start_page, end_page+1):
-
-        request = create_request(page)
-        content = get_content(request)
-        down_load(page, content)
+# if __name__ == '__main__':
+#     start_page = int(input('Please enter the starting page number: '))
+#     end_page = int(input('Please enter the ending page: '))
+#
+#     for page in range(start_page, end_page+1):
+#
+#         request = create_request(page)
+#         content = get_content(request)
+#         down_load(page, content)
 
 
