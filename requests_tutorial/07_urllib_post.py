@@ -1,10 +1,12 @@
 import ssl
 import urllib.request
 import urllib.parse
+import json
+
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-url = 'https://www.translate.com/machine-translation'
+url = 'https://translate.google.com/'
 
 headers = {
 'User-Agent':
@@ -12,7 +14,7 @@ headers = {
 }
 
 data = {
-    'q': 'python'
+    'hl': 'python'
 }
 
 # post リクエストパラメータはエンコードする必要があります
@@ -29,9 +31,6 @@ response = urllib.request.urlopen(request)
 content = response.read().decode('utf-8')
 
 # String --> json object
-
-import json
-
 obj = json.loads(content)
 print(obj)
 
