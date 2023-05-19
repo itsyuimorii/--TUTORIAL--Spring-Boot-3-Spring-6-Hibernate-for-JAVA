@@ -35,7 +35,6 @@ import json
 obj = json.loads(content)
 print(obj)
 
-
 # The parameters of the post request method must be encoded data = urllib.parse.urlencode(data)
 # After encoding, the encode method must be called data = urllib.parse.urlencode(data).encode('utf-8')
 # The parameters are placed in the request object's custom method request = urllib.request.Request(url=url,data=data,headers=headers)
