@@ -9,3 +9,6 @@ import urllib.request
 # 2. download image
 url_image = ''
 urllib.request.urlretrieve(url_image, "imagename.jpg")
+
+url = 'http://www.google.com'
+
