@@ -1,8 +1,6 @@
 import urllib
 import urllib.request
 
-
-
 # 1. download page
 # url_page = 'http://www.google.com'
 # parameter1: url, parameter2: filename
