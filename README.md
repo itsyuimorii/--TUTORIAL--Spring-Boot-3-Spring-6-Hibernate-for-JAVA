@@ -123,13 +123,12 @@ soup = BeautifulSoup(content, 'lxml')  # Parsing the HTML content using Beautifu
 
 ```
 
-In the given code:
+Here is the explanation of the code:
 
-- `import requests`: The `requests` library is imported to send HTTP requests to the specified website.
-- `from bs4 import BeautifulSoup`: The `BeautifulSoup` library is imported to parse and manipulate HTML content.
-- `website = 'https://subslikescript.com/movie/Titanic-120338'`: The URL of the website from which we want to fetch content is specified.
-- `result = requests.get(website)`: The `get()` function from the `requests` library is used to send a GET request to the specified website and store the response in the `result` variable.
-- `content = result.text`: The `text` attribute of the `result` object is accessed to extract the content from the response and store it in the `content` variable.
-- `soup = BeautifulSoup(content, 'lxml')`: The `BeautifulSoup` class is used to create a BeautifulSoup object `soup` by passing the `content` and the parser choice (`lxml` in this case) to parse the HTML content.
+1. Define a variable named `root` with the value `'https://subslikescript.com'`. This variable represents the root URL of a website.
+2. Create a new variable named `website` using an f-string (`f'{root}/movies'`). This variable represents a specific URL of a website, combining the value of the `root` variable and the string `'/movies'`. The resulting URL will be `'https://subslikescript.com/movies'`.
+3. Use the `requests` module's `get()` function to send a GET request to the aforementioned URL and retrieve the content of the webpage. This request will return a `Response` object, which is stored in the variable `result`.
+4. Extract the content of the webpage from the `result` object and store it in the variable `content`. This can be done by accessing the `text` attribute of the `result` object, which contains the raw HTML content of the webpage.
+5. Create a `BeautifulSoup` object named `soup` using the constructor function of the `BeautifulSoup` library. This object is used to parse the HTML content and provides easy access to elements and attributes within it. In this example, the HTML content is converted to a `BeautifulSoup` object using the `'lxml'` parser.
 
-###  mulitple page 
+Summary: The purpose of this code is to use the `requests` and `BeautifulSoup` libraries to retrieve HTML content from a specific website and parse it using a `BeautifulSoup` object for further processing.
