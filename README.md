@@ -132,3 +132,4 @@ In the given code:
 - `content = result.text`: The `text` attribute of the `result` object is accessed to extract the content from the response and store it in the `content` variable.
 - `soup = BeautifulSoup(content, 'lxml')`: The `BeautifulSoup` class is used to create a BeautifulSoup object `soup` by passing the `content` and the parser choice (`lxml` in this case) to parse the HTML content.
 
+###  mulitple page 
