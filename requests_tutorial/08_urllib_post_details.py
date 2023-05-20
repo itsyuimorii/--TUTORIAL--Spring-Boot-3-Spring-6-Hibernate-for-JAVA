@@ -42,7 +42,6 @@ data = urllib.parse.urlencode(data).encode('utf-8')
 
 request = urllib.request.Request(url= url, data = data, headers = headers)
 
-
 response = urllib.request.urlopen(request)
 
 # 获取响应的数据
