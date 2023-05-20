@@ -112,3 +112,23 @@ In summary, a POST request usually requires encoding the request body as a byte 
 
 
 
+```python
+import requests  # Importing the requests library to send HTTP requests
+from bs4 import BeautifulSoup  # Importing the BeautifulSoup library for HTML parsing
+
+website = 'https://subslikescript.com/movie/Titanic-120338'  # The URL of the website to fetch content from
+result = requests.get(website)  # Sending a GET request to fetch the website's response
+content = result.text  # Extracting the content from the response
+soup = BeautifulSoup(content, 'lxml')  # Parsing the HTML content using BeautifulSoup with the lxml parser
+
+```
+
+In the given code:
+
+- `import requests`: The `requests` library is imported to send HTTP requests to the specified website.
+- `from bs4 import BeautifulSoup`: The `BeautifulSoup` library is imported to parse and manipulate HTML content.
+- `website = 'https://subslikescript.com/movie/Titanic-120338'`: The URL of the website from which we want to fetch content is specified.
+- `result = requests.get(website)`: The `get()` function from the `requests` library is used to send a GET request to the specified website and store the response in the `result` variable.
+- `content = result.text`: The `text` attribute of the `result` object is accessed to extract the content from the response and store it in the `content` variable.
+- `soup = BeautifulSoup(content, 'lxml')`: The `BeautifulSoup` class is used to create a BeautifulSoup object `soup` by passing the `content` and the parser choice (`lxml` in this case) to parse the HTML content.
+
