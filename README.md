@@ -132,3 +132,23 @@ Here is the explanation of the code:
 5. Create a `BeautifulSoup` object named `soup` using the constructor function of the `BeautifulSoup` library. This object is used to parse the HTML content and provides easy access to elements and attributes within it. In this example, the HTML content is converted to a `BeautifulSoup` object using the `'lxml'` parser.
 
 Summary: The purpose of this code is to use the `requests` and `BeautifulSoup` libraries to retrieve HTML content from a specific website and parse it using a `BeautifulSoup` object for further processing.
+
+```python
+box = soup.find('articles', class_='main-article')
+
+links = []
+for link in box.find_all('a', href=True):
+    links.append(link['href'])
+```
+
+The purpose of this code is to find all the links within a selected HTML element (represented by the variable `box`) that have an `href` attribute, and store these links in the `links` list.
+
+1. Create an empty list called `links` to store the links.
+2. Use `box.find_all('a', href=True)` to find all the `<a>` tags within the HTML element `box` that have an `href` attribute. This function returns a list containing all the elements that meet this condition.
+3. Enter a loop to iterate through each `<a>` tag that meets the condition:
+   - Use `link['href']` to retrieve the value of the `href` attribute of the `<a>` tag, which represents the URL of the link.
+   - Append the URL of the link to the `links` list.
+4. After the loop finishes executing, the `links` list will contain all the found links.
+5. If desired, you can use `print(links)` to print the content of the `links` list and check if the links were successfully stored.
+
+Summary: The purpose of this code is to extract all the links from a specific HTML element and store them in a list for further processing.
