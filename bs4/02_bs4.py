@@ -1,5 +1,11 @@
 import requests  # Importing the requests library to send HTTP requests
 from bs4 import BeautifulSoup  # Importing the BeautifulSoup library for HTML parsing
+
+
+#####################################################
+# Extracting the links of multiple movie transcripts
+#####################################################
+
 # How To Get The HTML
 root = 'https://subslikescript.com'  # this is the homepage of the website
 website = f'{root}/movies'
@@ -16,6 +22,12 @@ for link in box.find_all('a', href=True):  # find_all returns a list
     links.append(link['href'])
 #print(links)
 
+#################################################
+# Extracting the movie transcript
+#################################################
+
+
+# Loop through the "links" list and sending a request to each link
 for link in links:
     result = requests.get(f'{root}/{link}')  # structure --> https://subslikescript.com/movie/X-Men_2-290334
     content = result.text  # Extracting the content from the response
