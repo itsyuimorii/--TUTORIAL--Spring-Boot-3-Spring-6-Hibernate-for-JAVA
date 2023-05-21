@@ -6,7 +6,7 @@ import pandas as pd
 import time
 
 web = "https://www.audible.com/adblbestsellers?ref=a_search_t1_navTop_pl0cg1c0r0&pf_rd_p=adc4b13b-d074-4e1c-ac46-9f54aa53072b&pf_rd_r=1F7DV0MPHV77Z61RX566"
-path = '/Users/frank/Downloads/chromedriver'
+path = '/Users/itsyuimoriispace/Downloads/chromedriver_mac_arm64/chromedriver'
 driver = webdriver.Chrome(path)
 driver.get(web)
 driver.maximize_window()

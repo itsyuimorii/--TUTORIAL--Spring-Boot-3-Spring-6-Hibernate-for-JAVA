@@ -4,4 +4,4 @@
 from selenium import webdriver
 
 website = 'https://www.adamchoi.co.uk/overs/detailed'
-path = ''
+path = '/Users/itsyuimoriispace/Downloads/chromedriver_mac_arm64/chromedriver'

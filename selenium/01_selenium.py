@@ -1,18 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+
 
 website = 'https://www.adamchoi.co.uk/overs/detailed'
-path = '/Users/itsyuimoriispace/Downloads/chromedriver_mac64/chromedriver'
-# Create a Service object using the ChromeDriverManager
-s = Service(ChromeDriverManager().install())
-
-# Create a WebDriver instance
-driver = webdriver.Chrome(service=s)
-
-# Rest of your code...
-
+service = Service('/Users/itsyuimoriispace/Downloads/chromedriver_mac_arm64/chromedriver')
+driver = webdriver.Chrome(service=service)
 driver.get(website)
 
+all_matches_button = driver.find_element('xpath', '//label[@analytics-event="All matches"]')
+all_matches_button.click()
 
 driver.quit()
