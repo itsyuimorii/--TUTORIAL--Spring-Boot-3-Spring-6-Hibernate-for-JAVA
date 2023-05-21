@@ -1,17 +1,7 @@
-# driver.find_element_by_id('id')
-# driver_find_element_by_class_name('class_name')
-
-'''
-driver.find _element_by_class _name('main-article')
-driver.find_element_by_class _name('plot')
-driver. find_element_by_class _name('full-script')
-driver.find_element_by_id('id')
-driver_find_element_by_class_name('class_name')
-
-driver.find_element_by_xpath(//tag[@AttributeName=
-"Value"]')
-'''
+# //label[@analytics-event="All matches"]
 
 
 from selenium import webdriver
 
+website = 'https://www.adamchoi.co.uk/overs/detailed'
+path = ''
