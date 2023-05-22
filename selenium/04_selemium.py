@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 web = "https://www.audible.ca/search"
 service = Service(
-    '/Users/itsyuimoriispace/Documents/GitHub/Web Scraping in Python BeautifulSoup, Selenium & Scrapy 2023/chromedriver_mac64/chromedriver')
+    '/Users/itsyuimoriispace/Downloads/chromedriver_mac64/chromedriver')
 # define 'driver' variable
 driver = webdriver.Chrome(service=service)
 driver.get(web)
