@@ -25,7 +25,7 @@ def main():
 
     elements = driver.find_elements(By.TAG_NAME, 'tr')
     for element in elements:
-        # 处理每个匹配的元素
+        # Process each matching element
         print(element.text)
     # driver.quit()
 
