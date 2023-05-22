@@ -1,6 +1,6 @@
 # Web Scraping in Python BeautifulSoup, Selenium & Scrapy 2023
 
-
+https://selenium-python.readthedocs.io/locating-elements.html
 
 https://requests.readthedocs.io/en/latest/user/quickstart/
 
