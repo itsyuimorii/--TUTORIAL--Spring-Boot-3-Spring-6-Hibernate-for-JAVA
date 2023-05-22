@@ -13,5 +13,3 @@ driver.maximize_window()
 
 container = driver.find_element(By.CLASS_NAME, "adbl-impression-container ")
 products = container.find_element('xpath', './li')
-
-for product in products:

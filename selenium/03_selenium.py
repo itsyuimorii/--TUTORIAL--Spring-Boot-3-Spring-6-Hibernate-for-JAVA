@@ -20,7 +20,8 @@ def main():
 
     # define the website to scrape and path where the chromediver is located
     website = 'https://www.adamchoi.co.uk/overs/detailed'
-    service = Service('/Users/itsyuimoriispace/Documents/GitHub/Web Scraping in Python BeautifulSoup, Selenium & Scrapy 2023/chromedriver_mac64/chromedriver')
+    service = Service('/Users/itsyuimoriispace/Downloads/chromedriver_mac64/chromedriver')
+
     # define 'driver' variable
     driver = webdriver.Chrome(service=service)
     # open Google Chrome with chromedriver
