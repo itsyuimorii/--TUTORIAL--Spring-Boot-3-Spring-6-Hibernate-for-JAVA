@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
@@ -17,16 +19,15 @@ def main():
     driver.get(website)
 
     # locate and click on a button
+
     all_matches_button = driver.find_element('xpath', '//label[@analytics-event="All matches"]')
     all_matches_button.click()
 
-    # # select dropdown and select element inside by visible text
-    # dropdown = Select(driver.find_element_by_id('country'))
-    # dropdown.select_by_visible_text('Spain')
-    # # implicit wait (useful in JavaScript driven websites when elements need seconds to load and avoid error "ElementNotVisibleException")
-    # time.sleep(3)
-
-#driver.quit()
+    elements = driver.find_elements(By.TAG_NAME, 'tr')
+    for element in elements:
+        # 处理每个匹配的元素
+        print(element.text)
+    # driver.quit()
 
 if __name__ == '__main__':
     main()
